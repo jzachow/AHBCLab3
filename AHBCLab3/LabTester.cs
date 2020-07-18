@@ -8,11 +8,15 @@ namespace AHBCLab3
     class LabTester
     {
 
+        //Return true if int is even, false if odd
         private bool TestEvenOrOdd(int x)
         {
             return (x % 2) == 0 ? true : false;
         }
 
+
+        //Validates user string input
+        //Returns false and tells user an invalid entry was entered if incorrect input was received
         public bool ValidateInput(string input)
         {
             if (int.TryParse(input, out int userNumber))
@@ -32,6 +36,8 @@ namespace AHBCLab3
             return false;
         }
 
+
+        //Returns correct text output based on user requirements
         public string ProcessToOutput(int x)
         {
             if (TestEvenOrOdd(x))

@@ -9,6 +9,7 @@ namespace AHBCLab3
             LabTester tester = new LabTester();
 
 
+            //Greet and get user info
             Console.Write("Hello User! Please enter your name:  ");
             string userName = Console.ReadLine();
             Console.WriteLine("-----------------------------------");
@@ -19,6 +20,7 @@ namespace AHBCLab3
             do
             {
 
+                //Get and validate integer from user
                 bool validInput;
                 string userInput;
                 do
@@ -28,9 +30,11 @@ namespace AHBCLab3
                     validInput = tester.ValidateInput(userInput);
                 } while (!validInput);
 
+                //Output correct text based on integer
                 Console.WriteLine(tester.ProcessToOutput(int.Parse(userInput)));
 
 
+                //Determine if user would like to run again
                 do
                 {
                     Console.WriteLine($"\nWould you like to run the program again, {userName}? (y/n)");
