@@ -15,7 +15,7 @@ namespace AHBCLab3
         /// <returns>Returns true if the integer is even, odd if the integer is false</returns>
         private static bool TestEvenOrOdd(int userInteger  )
         {
-            return (userInteger % 2) == 0 ? true : false;
+            return (userInteger % 2 == 0);
         }
 
 
